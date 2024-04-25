@@ -35,6 +35,8 @@ body,html {
     font-size: 1rem;
 }
 
+.center {text-align: center;}
+
 .section-margin {margin-top: 4rem;}
 
 .mb2 {margin-bottom: 2rem;}
@@ -244,7 +246,7 @@ h1 {
     gap: 2rem;
     max-width: 1400px;
     margin-inline: auto;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     position: relative;
     top: -60px;
 }
@@ -258,7 +260,7 @@ h1 {
 
 h3 {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .grid-characteristic h3::after {
@@ -298,8 +300,9 @@ h2 {
 }
 
 .flex img {
-    width: 40%;
+    max-width: 450px;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .left-content {
@@ -355,7 +358,7 @@ h2 {
     gap: 2rem;
     max-width: 1400px;
     margin-inline: auto;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 2rem;
 }
 
@@ -369,7 +372,46 @@ h2 {
     gap: 1rem;
 }
 
-.one-grid-services img {height: 60px;}
+.one-grid-services img {height: 56px;}
+
+/* Reference */
+
+.carousel-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.one-reference {
+    padding: 3rem;
+    border-radius: 20px;
+    background-color: var(--classic-white-color);
+    max-width: 500px;
+}
+
+.reference-paragraph {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.reference-name {
+    font-weight: 600;
+}
+
+.carousel-wrapper button {
+    width: 45px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.carousel-wrapper button img {
+    width: 100%;
+    height: 100%;
+}
+
+.rotate180 {transform: rotate(180deg);}
 
 /* Kontakt */
 
@@ -381,13 +423,13 @@ h2 {
 
 .form-and-contact {
     display: flex;
-    justify-content: center;
     align-items: center;
     max-width: 1400px;
     width: 100%;
     margin-inline: auto;
     justify-content: space-around;
     margin-top: 4rem;
+    gap: 3rem;
 }
 
 form {
@@ -446,8 +488,8 @@ input[type="submit"] {
 .email-img, .phone-img {
     background-color: var(--dark-blue-color);
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -501,7 +543,17 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
+    .grid-services {grid-template-columns: repeat(2, 1fr);}
+}
+
+@media only screen and (max-width: 1100px){
+    #mobile-menu { display: inline-block; }
+
+    nav { display: none; }
+
+    .grid-characteristic {grid-template-columns: repeat(2, 1fr);}
+
     .flex {
         flex-direction: column;
         align-items: center;
@@ -510,10 +562,18 @@ footer {
     .flex img {
         width: 100%;
     }
+
+    .left-content {
+        align-items: center;
+    }
+
+    .form-and-contact {
+        flex-direction: column;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], textarea {width: 100%;}
 }
 
-@media only screen and (max-width: 1100px){
-    #mobile-menu { display: inline-block; }
-
-    nav { display: none; }
+@media only screen and (max-width: 600px){
+    .grid-characteristic, .grid-services {grid-template-columns: 1fr;}
 }

@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P6FXQEBVXZ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P6FXQEBVXZ');
+    </script>
 </head>
 <body>
     <header>
@@ -29,11 +38,12 @@
                         <li><a href="#uvod">Úvod</a></li>
                         <li><a href="#o-mne">O mně</a></li>
                         <li><a href="#sluzby">Služby</a></li>
+                        <!-- <li><a href="#reference">Reference</a></li> -->
                         <li><a href="#kontakt">Kontakt</a></li>
                     </ul>
                 </nav>
                 <a href="#kontakt" class="cta-button primary-button"><img src="img/calendar.svg" alt="" width="20" height="20"><span>Sjednat schůzku</span></a>
-                <button id="mobile-menu">
+                <button id="mobile-menu" aria-label="Otevřít menu">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -43,6 +53,7 @@
                         <li><a class="mobile-href" href="#uvod">Úvod</a></li>
                         <li><a class="mobile-href" href="#o-mne">O mně</a></li>
                         <li><a class="mobile-href" href="#sluzby">Služby</a></li>
+                        <!-- <li><a class="mobile-href" href="#referemce">Reference</a></li> -->
                         <li><a class="mobile-href" href="#kontakt">Kontakt</a></li>
                     </ul>
                 </div>
@@ -66,19 +77,19 @@
             <div class="grid-characteristic padding-inline">
                 <div class="one-grid-characteristic">
                     <h3 class="uppercase">Profesionalita</h3>
-                    <p class="paragraph">Snažím se nejen poskytovat odborné poradenství, ale také budovat dlouhodobé vztahy založené na důvěře.</p>
+                    <p class="paragraph">Poskytuji odborné poradenství a ke klientům jsem otevřená a upřímná.</p>
                 </div>
                 <div class="one-grid-characteristic">
                     <h3 class="uppercase">Vstřícnost</h3>
-                    <p class="paragraph">Naslouchám a rozumím vaším potřebám a poskytnu vám individuální péči a podporu.</p>
+                    <p class="paragraph">Svým klientům pečlivě naslouchám. Poskytuji Vám individuální péči a podporu.</p>
                 </div>
                 <div class="one-grid-characteristic">
                     <h3 class="uppercase">Empatie</h3>
-                    <p class="paragraph">Rozumím, že finanční rozhodování může být náročné a emocionálně významné. Jsem tady pro vás.</p>
+                    <p class="paragraph">Rozumím, že svět financí může být pro mnohé z vás náročné. Jsem tady pro vás.</p>
                 </div>
                 <div class="one-grid-characteristic">
-                    <h3 class="uppercase">Upřímnost</h3>
-                    <p class="paragraph">Jsem otevřená a upřímná ohledně rizik, výhod a možností, které jsou spojeny s mými službami.</p>
+                    <h3 class="uppercase">Důvěra</h3>
+                    <p class="paragraph">Je pro mě důležité budovat dlouhodobé vztahy založené na vzájemné důvěře.</p>
                 </div>
             </div>
             <div class="buttons">
@@ -91,11 +102,12 @@
             <div class="left-content">
                 <h2>O mně</h2>
                 <div class="paragraphs">
-                    <p class="paragraph mb2">Jmenuji se Nela Vlčková a jsem finanční poradce, který pomáhá klientům dosáhnout jejich finančních cílů. Ve svém oboru finančního poradenství jsem se specializovala na individuální přístup ke každému klientovi. Mé hlavní poslání spočívá v tom, abych vám pomohl plánovat a dosáhnout finanční stability, která vám umožní žít život, který si zasloužíte.</p>
-                    <p class="paragraph mb2">Mé služby zahrnují komplexní zhodnocení vaší finanční situace, pomoc při stanovení cílů a strategii pro jejich dosažení a také průběžné monitorování a upravování vašeho plánu podle vašich potřeb a změn v životní situaci. Snažím se vám poskytnout jasné a srozumitelné vysvětlení vašich možností.</p>
-                    <p class="paragraph mb2">Jmenuji se Nela Vlčková a jsem finanční poradce, který pomáhá klientům dosáhnout jejich finančních cílů. Ve svém oboru finančního poradenství jsem se specializovala na individuální přístup ke každému klientovi. Mé hlavní poslání spočívá v tom, abych vám pomohla plánovat a dosáhnout finanční stability, která vám umožní žít život, který si zasloužíte.</p>
-                    <p class="paragraph mb2">Mé služby zahrnují komplexní zhodnocení vaší finanční situace, pomoc při stanovení cílů a strategii pro jejich dosažení a také průběžné monitorování a upravování vašeho plánu podle vašich potřeb a změn v životní situaci. Snažím se vám poskytnout jasné a srozumitelné vysvětlení vašich možností.</p>
-                    <p class="paragraph mb2">Pokud máte jakýkoli dotaz a potřebujete se poradit, neváhejte mě kontaktovat.</p>
+                    <p class="paragraph mb2">Finance jsou starost každého z nás. Chápu, pokud na téma finance nemáte dostatek času, chuti, či jste v tomto světě nejistí, bezmocní a nevíte, co je pro vás nejlepší. Proto mi dovolte, abych se Vám představila a co pro kohokoliv z vás, jako člověk milující svou práci, můžu udělat.</p>
+                    <p class="paragraph mb2">Jmenuji se Nela Vlčková a jsem finanční poradce působící v celém Moravskoslezském kraji.</p>
+                    <p class="paragraph mb2">Pomáhám klientům dosáhnout jejich finančních cílů, snů a zabezpečení. Mé služby zahrnují komplexní zhodnocení vaší situace, pomoc při stanovení cílů a strategii pro jejich dosažení. Součástí je také průběžná kontrola a úpravy dle vašich potřeb a změn v životní situaci.</p>
+                    <p class="paragraph mb2">Zakládám si na lidském a empatickém přístupu bez jakéhokoliv nátlaku. Mou prioritou je spokojený klient, který mi věří.</p>
+                    <p class="paragraph mb2">Co schůzkou se mnou můžete získat? Příjemně strávený čas na místě, které je vám komfortní. Popovídáme si, probereme vaši finanční situaci, získáte můj pohled na věc a vhodná řešení přímo pro vás.</p>
+                    <p class="paragraph">Pojďme se setkat! Kontaktní formulář na mě najdete níže.</p>
                 </div>
                 <a href="#kontakt" class="primary-button cta-button"><span>Kontakt</span></a>
             </div>
@@ -107,80 +119,89 @@
                 <h2>Služby</h2>
             </div>
             <div class="service-text">
-                <p class="paragraph"><strong>Za mé služby nic neplatíte</strong>, jsem placena z uzavřených smluv. Nejde jen o poradenství, jde o partnerství, které vám pomůže dosáhnout vašich finančních cílů.</p>
+                <p class="paragraph"><strong>Za spolupráci se mnou nic neplatíte.</strong><br>Níže najdete služby, které svým klientům poskytuji.</p>
             </div>
             <div class="grid-services mt4 padding-inline">
                 <div class="one-grid-services">
-                    <img src="img/financni-plan-ikona.png" alt="">
+                    <img src="img/financni-plan.svg" alt="">
                     <h3 class="uppercase">Finanční plán</h3>
                     <p class="paragraph">Vytvoření finančního plánu je klíčovým krokem k dosažení finanční stability a dosažení vašich dlouhodobých cílů.</p>
                 </div>
                 <div class="one-grid-services">
-                    <img src="img/pojisteni-ikona.svg" alt="">
-                    <h3 class="uppercase">Pojištění</h3>
-                    <p class="paragraph">Provedu důkladnou analýzu vašich individuálních potřeb a rizik. Poté doporučím vhodný mix pojištění, který zajistí ochranu vaší rodiny, majetku a příjmů.</p>
+                    <img src="img/rezerva.svg" alt="">
+                    <h3 class="uppercase">Rezerva</h3>
+                    <p class="paragraph">Finanční rezerva je důležitým prvkem zdravého finančního plánování. Jedná se o peněžní prostředky, které se odkládají na stranu na neočekávané události jako jsou ztráta zaměstnání, nečekané výdaje či zdravotní problémy.</p>
                 </div>
                 <div class="one-grid-services">
-                    <img src="img/uvery-ikona.png" alt="">
+                    <img src="img/zivotni-pojisteni.svg" alt="">
+                    <h3 class="uppercase">Životní pojištění</h3>
+                    <p class="paragraph">Životní pojištění poskytuje finanční ochranu v případě nečekaných životních situacích, jako jsou vážné nemoci, invalidita, úmrtí, trvalé následky či dlouhodobá pracovní neschopnost.</p>
+                </div>
+                <div class="one-grid-services">
+                    <img src="img/nezivotni-pojisteni.svg" alt="">
+                    <h3 class="uppercase">Neživotní pojištění</h3>
+                    <p class="paragraph">Neživotní pojištění chrání věci jako je auto, nemovitost nebo majetek. Pomáhá vás krýt před finančními ztrátami v případě požáru, krádeže, havárie či jiných nepředvídatelných událostí.</p>
+                </div>
+                <div class="one-grid-services">
+                    <img src="img/uvery.svg" alt="">
                     <h3 class="uppercase">Úvěry</h3>
-                    <p class="paragraph">Hledáte finanční podporu pro své plány a projekty? Jsem zde pro vás, abych vám pomohla dosáhnout vašich cílů s jistotou a důvěrou.</p>
+                    <p class="paragraph">Úvěry poskytují možnost získat potřebné finanční prostředky, když jsou potřeba a pak je splácet v průběhu času.</p>
                 </div>
                 <div class="one-grid-services">
-                    <img src="img/sporeni-ikona.png" alt="">
+                    <img src="img/hypoteky.svg" alt="">
+                    <h3 class="uppercase">Bydlení</h3>
+                    <p class="paragraph">Domov je místem, kde trávíme většinu času a kde nacházíme pohodlí a bezpečí. Ráda vám k vlastnímu bydlení, ať už hypotékou, či jinými možnostmi pomůžu.</p>
+                </div>
+                <div class="one-grid-services">
+                    <img src="img/sporeni.svg" alt="">
                     <h3 class="uppercase">Spoření</h3>
                     <p class="paragraph">Pomohu vám vybrat správné spořící produkty, ať už si spoříte na důchod či pouze krátkodobě.</p>
                 </div>
                 <div class="one-grid-services">
-                    <img src="img/hypoteka-ikona.svg" alt="">
-                    <h3 class="uppercase">Hypotéky</h3>
-                    <p class="paragraph">Hypotéka je důležitým krokem při koupi nebo investici do nemovitosti. Vytvořím vám srovnání hypoték a společně vybereme to nejlepší řešení.</p>
-                </div>
-                <div class="one-grid-services">
-                    <img src="img/investovani-ikona.png" alt="">
+                    <img src="img/investovani.svg" alt="">
                     <h3 class="uppercase">Investování</h3>
-                    <p class="paragraph">Pomáhám klientům při výběru vhodných investičních produktů a správě portfolia.</p>
-                </div>
-                <div class="one-grid-services">
-                    <img src="img/uvery-ikona.png" alt="">
-                    <h3 class="uppercase">Úvěry</h3>
-                    <p class="paragraph">Rozumím, že finanční rozhodování může být náročné a emocionálně významné. Jsem tady pro vás.</p>
-                </div>
-                <div class="one-grid-services">
-                    <img src="img/sporeni-ikona.png" alt="">
-                    <h3 class="uppercase">Spoření</h3>
-                    <p class="paragraph">Jsem otevřená a upřímná ohledně rizik, výhod a možností, které jsou spojeny s mými službami.</p>
+                    <p class="paragraph">Investování je důležité pro budování vlastního bohatství a dosahování finančních cílů. Pomáhá vám vytvářet pasivní příjem, plánovat naší budoucnost nebo se zebezpečit proti inflaci.</p>
                 </div>
             </div>
         </section>
+
+        <!-- <section id="reference" class="section-margin">
+            <h2 class="center">Reference</h2>
+            <div class="carousel-wrapper">
+                <button class="rotate180"><img src="img/sipka.svg" alt=""></button>
+                <div class="one-reference">
+                    <p class="reference-paragraph mb2">„Jsem otevřená a upřímná ohledně rizik, výhod a možností, které jsou spojeny s mými službami. Rozumím, že finanční rozhodování může být náročné a emocionálně významné. Jsem tady pro vás.“</p>
+                    <p class="paragraph reference-name">Jirkes Pilár</p>
+                </div>
+                <button><img src="img/sipka.svg" alt=""></button>
+            </div>
+        </section> -->
 
         <section id="kontakt" class="section-margin">
             <div class="h2-bg contact-bg">
                 <h2>Kontakt</h2>
             </div>
             <div class="form-and-contact padding-inline">
-                <form action="https://formsubmit.co/finance@nelavlckova.cz" method="POST">
+                <form action="https://formspree.io/f/mrgnrvyg" method="POST">
                     <h3>Máte <span class="blue-color">dotaz</span> nebo si chcete <span class="blue-color">sjednat schůzku?</span></h3>
-                    <input type="hidden" name="_subject" value="Nová zpráva z webu!">
-                    <input type="hidden" name="_captcha" value="false">
                     <input type="text" placeholder="Jméno a příjmení*" name= "name" required>
                     <input type="email" placeholder="Emailová adresa*" name="email" required>
                     <input type="tel" placeholder="Telefonní číslo" name="telephone">
                     <textarea cols="50" rows="10" placeholder="Vaše zpráva*" required name="message"></textarea>
                     <p>*povinný údaj</p>
-                    <div class="g-recaptcha" data-sitekey="6LfXo7opAAAAAM6HaLiQOHu9S8gUFeFw2aKy6G4p"></div>
+                    <div class="g-recaptcha" data-sitekey="6LfXo7opAAAAAM6HaLiQOHu9S8gUFeFw2aKy6G4p" required></div>
                     <input type="submit" value="Odeslat" class="cta-button primary-button uppercase">
                 </form>
                 <div class="email-and-phone">
-                    <h3>Kontaktní údaje</h3>
                     <div class="email">
                         <div class="email-img">
-                            <img src="img/email-icon.svg" alt="" width="30" height="30">
+                            <img src="img/email-icon.svg" alt="" width="25" height="25">
                         </div>
                         <a href="mailto:finance@nelavlckova.cz">finance@nelavlckova.cz</a>
                     </div>
                     <div class="phone">
                         <div class="phone-img">
-                            <img src="img/phone-icon.svg" alt="" width="30" height="30">
+                            <img src="img/phone-icon.svg" alt="" width="25" height="25">
                         </div>
                         <a href="tel:+420735998536">+420 735 998 536</a>
                     </div>
