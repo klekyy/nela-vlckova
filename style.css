@@ -193,6 +193,7 @@ button#mobile-menu.close .bar:last-child { transform: translateY(-12px) rotate(-
 .nejaky-div h3 {
     letter-spacing: .4rem;
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 .nejaky-div :last-child {
@@ -261,10 +262,13 @@ h1 {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+.one-grid-characteristic h3 {
+    text-transform: uppercase;
+}
+
 h3 {
     font-size: 1.3rem;
     font-weight: 700;
-    text-transform: uppercase;
 }
 
 .grid-characteristic h3::after {
@@ -375,6 +379,10 @@ h2 {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+
+.one-grid-services h3 {
+    text-transform: uppercase;
 }
 
 .one-grid-services img {height: 48px;}
