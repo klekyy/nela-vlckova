@@ -338,18 +338,10 @@ h3 {
     align-items: center;
 }
 
-.homepage-photo::before {
-    content: '';
-    position: absolute;
-    opacity: 0.6;
-    background-image: url('img/nela-uvodni.webp');
-    background-position: center;
-    background-size: cover;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-}
+.bg-cover{position:absolute;inset:0;z-index:0}
+.bg-cover img{width:100%;height:100%;object-fit:cover;display:block}
+.bg-cover img.is-dimmed{opacity:.6}
+.bg-cover img.is-dimmed-50{opacity:.5}
 
 .transparent-div {
     max-width: 1400px;
@@ -359,6 +351,8 @@ h3 {
     display: flex;
     justify-content: flex-end;
 }
+.homepage-photo .transparent-div{position:relative;z-index:1}
+.h2-bg>:not(.bg-cover){position:relative;z-index:1}
 
 .text {
     margin-inline: 2rem;
@@ -425,9 +419,7 @@ h1 {
 }
 
 @media only screen and (max-width: 600px) {
-    .homepage-photo::before {
-        background-image: url(img/nela-uvodni2.webp) !important;
-    }
+    
 }
 
 /* O mně */
@@ -492,29 +484,17 @@ h2 {
     height: 200px;
     max-width: calc(1300px - 2rem);
     margin-inline: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     position: relative;
     padding-inline: 2rem;
-}
-
-.h2-bg::before {
-    content: '';
-    position: absolute;
-    opacity: 0.5;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
     border-radius: 12px;
+    overflow: hidden;
 }
 
-.services-bg::before {
-    background-image: url("img/uvodni-fotka.webp");
-    background-position: center;
-    background-size: cover;
-}
+    
+
+    
 
 .service-heading {
     text-align: center;
@@ -525,6 +505,8 @@ h2 {
 .h2-bg h2 {
     position: relative;
 }
+.h2-bg .service-heading{justify-self:center;text-align:center}
+.h2-bg.homepage-photo{display:grid;place-items:center}
 
 .service-text {
     display: flex;
@@ -836,11 +818,7 @@ h2 {
 
 /* Kontakt */
 
-.contact-bg::before {
-    background-image: url("img/kontakt.webp");
-    background-position: center;
-    background-size: cover;
-}
+    
 
 .form-and-contact {
     display: flex;
@@ -1195,9 +1173,7 @@ input[type="checkbox"] {
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
-    background: url(img/nela-uvodni.webp);
-    background-position: center;
-    background-size: cover;
+    
     color: var(--classic-white-color);
     position: relative;
 }
@@ -1214,9 +1190,7 @@ input[type="checkbox"] {
     z-index: 1;
 }
 
-.richtext-section-bg-image>* {
-    z-index: 2;
-}
+.richtext-section-bg-image>:not(.bg-cover){position:relative;z-index:2}
 
 .grid-characteristic-white {
     padding: 2rem 1.4rem;
@@ -1227,6 +1201,7 @@ input[type="checkbox"] {
     justify-content: center;
     flex-direction: column;
     border-radius: 8px;
+    border: 1px solid #ffffff38;
 }
 
 .grid-characteristic-white h3 {

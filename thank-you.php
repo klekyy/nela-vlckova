@@ -55,6 +55,10 @@
             require_once "./templates/breadcrumbs.php";
         ?>
         <div class="homepage-photo">
+            <picture class="bg-cover" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="img/nela-uvodni2.webp">
+                <img src="img/nela-uvodni.webp" alt="" loading="eager" fetchpriority="high" class="is-dimmed">
+            </picture>
             <div class="transparent-div">
                 <div class="text">
                     <h1>Formulář v pořádku dorazil</span></h1>

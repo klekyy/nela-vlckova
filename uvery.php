@@ -134,6 +134,9 @@
         </section>
         <section class="section-margin">
             <div class="richtext-section-bg-image">
+                <div class="bg-cover" aria-hidden="true">
+                    <img src="img/nela-uvodni.webp" alt="" loading="lazy" fetchpriority="low">
+                </div>
                 <h2 class="relative center">Proč si vybrat právě mě?</h2>
                 <div class="grid-characteristic padding-inline grid-char-col-2">
                     <div class="grid-characteristic-white" data-aos="zoom-in" data-aos-delay="100">

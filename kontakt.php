@@ -58,7 +58,11 @@
             require_once "./templates/breadcrumbs.php";
         ?>
         <section>
-            <div class="h2-bg homepage-photo">
+            <div class="h2-bg">
+                <picture class="bg-cover" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="img/kontakt.webp">
+                    <img src="img/kontakt.webp" alt="" loading="eager" fetchpriority="high" class="is-dimmed-50">
+                </picture>
                 <h1 class="service-heading">Kontaktujte mě</h1>
             </div>
             <div class="form-and-contact padding-inline">

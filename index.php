@@ -97,6 +97,10 @@ function format_cz_date($isoDate) {
     <main>
         <section id="uvod">
             <div class="homepage-photo">
+                <picture class="bg-cover" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="img/nela-uvodni2.webp">
+                    <img src="img/nela-uvodni.webp" alt="" loading="eager" fetchpriority="high" class="is-dimmed">
+                </picture>
                 <div class="transparent-div">
                     <div class="text">
                         <h1>Nezávislý <span class="blue-color">finanční poradce</span> Nela Klečková</h1>
@@ -140,6 +144,9 @@ function format_cz_date($isoDate) {
         </section>
         <section id="sluzby" class="section-margin">
             <div class="h2-bg services-bg">
+                <div class="bg-cover" aria-hidden="true">
+                    <img src="img/uvodni-fotka.webp" alt="" loading="lazy" fetchpriority="low" class="is-dimmed-50">
+                </div>
                 <h2 data-aos="fade-up" data-aos-delay="100">Mé <span class="blue-color">služby</span></h2>
             </div>
             <div class="service-text">
@@ -201,6 +208,9 @@ function format_cz_date($isoDate) {
         </section>
         <section id="kontakt" class="section-margin">
             <div class="h2-bg contact-bg">
+                <div class="bg-cover" aria-hidden="true">
+                    <img src="img/kontakt.webp" alt="" loading="lazy" fetchpriority="low" class="is-dimmed-50">
+                </div>
                 <h2 data-aos="fade-up" data-aos-delay="100">Jsem tu <span class="blue-color">pro vás</span></h2>
             </div>
             <div class="form-and-contact padding-inline">
