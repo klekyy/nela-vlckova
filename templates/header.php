@@ -2,7 +2,7 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
  <!-- MailerLite Universal -->
-<header>
+<header class="site-header">
     <div class="small-header">
         <p class="header-contacts">
             <img src="img/phone-icon.svg" alt="Telefon" width="12" height="auto">

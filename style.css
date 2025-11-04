@@ -1349,7 +1349,7 @@ input[type="file"] {
 
 @media (hover: hover) {
 
-    header nav ul li a:hover {
+    .site-header nav ul li a:hover {
         color: var(--light-blue-color);
         transition: color .6s;
     }

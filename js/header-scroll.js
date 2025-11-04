@@ -1,6 +1,6 @@
 // Sticky header: hide on scroll down, show on scroll up (with smooth slide)
 (function () {
-  const header = document.querySelector('header');
+  const header = document.querySelector('.site-header');
   if (!header) return;
 
   let lastY = window.scrollY || 0;
