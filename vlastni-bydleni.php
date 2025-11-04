@@ -79,7 +79,7 @@
                     <p class="paragraph tag-text">Bydlení není jen o nemovitosti – je o schopnosti ji <span class="bold">financovat, udržet a chránit.</span> Pomohu vám s každým krokem.</p>
                 </div>
                 <div class="image-with-bullets__image-content">
-                    <img src="img/domov.jpg" alt="Vlastní bydlení" loading="lazy" fetchpriority="low">
+                    <img src="img/domov.webp" alt="Vlastní bydlení" loading="lazy" fetchpriority="low">
                 </div>
             </div>
         </section>

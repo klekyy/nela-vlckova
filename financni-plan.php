@@ -78,7 +78,7 @@
                     </ul>
                 </div>
                 <div class="image-with-bullets__image-content">
-                    <img src="img/uvodni-fotka.jpg" alt="Kontakt" loading="lazy" fetchpriority="low">
+                    <img src="img/uvodni-fotka.webp" alt="Kontakt" loading="lazy" fetchpriority="low">
                 </div>
             </div>
         </section>

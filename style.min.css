@@ -1560,3 +1560,11 @@ body.no-scroll{overflow:hidden;position:fixed;left:0;right:0;width:100%}
 .mobile-panel__title{font-weight:700}
 .mobile-back{background:none;border:0;color:var(--dark-blue-color);font-size:1.1rem;cursor:pointer;padding:.5rem 0;display:inline-flex;align-items:center;gap:.35rem}
 .mobile-back .icon-caret-left{width:22px;height:22px;transform:rotate(90deg);color:var(--dark-blue-color)}
+
+/* Sticky header: slide hide/show on scroll */
+/* Fixed header with slide animation */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;transform:translateY(0);transition:transform .28s ease;will-change:transform}
+header.header--hidden{transform:translateY(-100%)}
+header.header--scrolled .main-header{box-shadow:0 4px 16px rgba(0,0,0,.07)}
+/* Compensate content for fixed header height */
+body{padding-top:var(--header-offset,116px)}

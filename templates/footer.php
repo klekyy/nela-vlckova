@@ -61,6 +61,7 @@
 </footer>
 </main>
 <script defer src="./js/mobile-menu.min.js"></script>
+<script defer src="./js/header-scroll.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <!-- Smartsupp Live Chat script -->
 <script defer type="text/javascript">
