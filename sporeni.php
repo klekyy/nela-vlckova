@@ -40,6 +40,9 @@
     <meta property="og:title" content="Spoření, které dává smysl | Krátkodobé i dlouhodobé cíle">
     <meta property="og:image" content="img/nahledovka.webp">
     <meta property="og:description" content="Chcete začít spořit, ale nevíte jak? Společně najdeme jednoduchý a funkční způsob, jak na to. Nezávazná konzultace zdarma.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nelavlckova.cz/sporeni">
+    <link rel="canonical" href="https://nelavlckova.cz/sporeni">
     <link rel="preload" href="fonts/Quicksand-Medium.woff2" as="font">
     <link rel="preload" href="fonts/Quicksand-Regular.woff2" as="font">
     <link rel="stylesheet" href="./style.min.css">
@@ -200,6 +203,28 @@
         </section>
     </main>
     <?php require_once "./templates/footer.php" ?>
+    <script type="application/ld+json">
+    <?php
+      $siteUrl = 'https://nelavlckova.cz/';
+      $logoUrl = $siteUrl . 'img/logo.webp';
+      $service = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Service',
+        'name' => 'Spoření – finanční poradenství',
+        'description' => 'Nastavení funkčního spořicího plánu pro krátkodobé i dlouhodobé cíle, bez zbytečného rizika.',
+        'url' => $siteUrl . 'sporeni',
+        'provider' => [
+          '@type' => 'Organization',
+          'name' => 'Nela Klečková',
+          'url' => $siteUrl,
+          'logo' => $logoUrl
+        ],
+        'areaServed' => 'CZ',
+        'inLanguage' => 'cs-CZ'
+      ];
+      echo json_encode($service, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    ?>
+    </script>
     <script defer src="./js/faq.min.js"></script>
     <script type="application/ld+json">
         {

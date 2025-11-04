@@ -27,6 +27,12 @@
     <title></title>
     <meta name="description"
         content="">
+    <meta property="og:title" content="Děkujeme za odeslání formuláře | Nela Klečková">
+    <meta property="og:description" content="Formulář byl úspěšně odeslán. Brzy se vám ozvu.">
+    <meta property="og:image" content="img/nahledovka.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nelavlckova.cz/thank-you">
+    <link rel="canonical" href="https://nelavlckova.cz/thank-you">
     <link rel="stylesheet" href="style.min.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <meta name="robots" content="noindex, follow">

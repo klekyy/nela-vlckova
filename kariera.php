@@ -40,6 +40,9 @@
     <meta property="og:title" content="Kariéra finančního poradce | Práce s možností růstu a flexibility">
     <meta property="og:image" content="img/nahledovka.webp">
     <meta property="og:description" content="Hledám nové finanční poradce do svého týmu v Ostravě. Získej flexibilní práci, možnost neomezeného výdělku a podporu zkušené poradkyně. Přidej se do mého týmu!">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nelavlckova.cz/kariera">
+    <link rel="canonical" href="https://nelavlckova.cz/kariera">
     <link rel="preload" href="fonts/Quicksand-Bold.woff2" as="font">
     <link rel="preload" href="fonts/Quicksand-Medium.woff2" as="font">
     <link rel="preload" href="fonts/Quicksand-Regular.woff2" as="font">
@@ -178,7 +181,7 @@
                 <p class="paragraph center">Chceš se dozvědět víc o tom, jak pracuje finanční poradce? Ozvi se mi a <span class="bold">domluvíme si nezávazné setkání.</span> Ráda ti vše vysvětlím a ukážu ti, jak může vypadat tvůj <span class="bold">nový kariérní start.</span> Těším se na tebe!</p>
             </div>
             <div class="form-and-contact padding-inline">
-                <form action="send-cv.php" method="POST" enctype="multipart/form-data">
+                <form action="send-cv.php" method="POST" enctype="multipart/form-data" novalidate>
                     <div class="input">
                         <label for="name" class="input__label">Jméno a příjmení</label>
                         <input type="text" name="name" id="name" required>
@@ -258,6 +261,36 @@
     </main>
     <?php require_once "./templates/footer.php" ?>
     <script defer src="./js/faq.min.js"></script>
+    <script type="application/ld+json">
+    <?php
+      $siteUrl = 'https://nelavlckova.cz/';
+      $orgName = 'Nela Klečková';
+      $logoUrl = $siteUrl . 'img/logo.webp';
+      $desc = 'Hledám nové finanční poradce do týmu. Flexibilní spolupráce, možnost růstu a férové odměny.';
+      $job = [
+        '@context' => 'https://schema.org',
+        '@type' => 'JobPosting',
+        'title' => 'Finanční poradce / poradkyně',
+        'description' => $desc,
+        'employmentType' => ['FULL_TIME','PART_TIME','CONTRACTOR'],
+        'hiringOrganization' => [
+          '@type' => 'Organization',
+          'name' => $orgName,
+          'sameAs' => $siteUrl,
+          'logo' => $logoUrl
+        ],
+        'jobLocationType' => 'TELECOMMUTE',
+        'applicantLocationRequirements' => [
+          '@type' => 'Country',
+          'name' => 'Czech Republic'
+        ],
+        'directApply' => true,
+        'industry' => 'Financial Services',
+        'inLanguage' => 'cs-CZ'
+      ];
+      echo json_encode($job, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    ?>
+    </script>
     <script>
         document.getElementById('cv_file').addEventListener('change', function(e) {
             const fileNameDisplay = document.getElementById('file-name');

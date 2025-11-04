@@ -22,3 +22,23 @@ if (!isset($breadcrumbs) || !is_array($breadcrumbs) || count($breadcrumbs) === 0
     <?php endforeach; ?>
   </ol>
 </nav>
+<script type="application/ld+json">
+<?php
+  // Build BreadcrumbList JSON-LD
+  $items = [];
+  foreach ($breadcrumbs as $i => $item) {
+    $items[] = [
+      '@type' => 'ListItem',
+      'position' => $i + 1,
+      'name' => (string)($item['label'] ?? ''),
+      'item' => isset($item['url']) && $item['url'] !== '' ? $item['url'] : null,
+    ];
+  }
+  $json = [
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => $items,
+  ];
+  echo json_encode($json, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+?>
+</script>

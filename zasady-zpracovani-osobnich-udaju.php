@@ -43,6 +43,12 @@
     <title>Zásady ochrany osobních údajů | Nela Klečková</title>
     <meta name="description"
         content="">
+    <meta property="og:title" content="Zásady ochrany osobních údajů | Nela Klečková">
+    <meta property="og:description" content="Zásady ochrany osobních údajů pro web nelavlckova.cz.">
+    <meta property="og:image" content="img/nahledovka.webp">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nelavlckova.cz/zasady-zpracovani-osobnich-udaju">
+    <link rel="canonical" href="https://nelavlckova.cz/zasady-zpracovani-osobnich-udaju">
     <link rel="stylesheet" href="style.min.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <meta name="robots" content="noindex, follow">

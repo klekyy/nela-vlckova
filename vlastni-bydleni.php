@@ -40,6 +40,9 @@
     <meta property="og:title" content="Finanční poradenství pro vlastní bydlení | Rozumné a bezpečné řešení">
     <meta property="og:image" content="img/nahledovka.webp">
     <meta property="og:description" content="Plánujete koupi nebo rekonstrukci bydlení? Pomohu vám s hypotékou, pojištěním i rozpočtem. Finanční poradenství na míru.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nelavlckova.cz/vlastni-bydleni">
+    <link rel="canonical" href="https://nelavlckova.cz/vlastni-bydleni">
     <link rel="preload" href="fonts/Quicksand-Medium.woff2" as="font">
     <link rel="preload" href="fonts/Quicksand-Regular.woff2" as="font">
     <link rel="stylesheet" href="./style.min.css">
@@ -200,6 +203,28 @@
         </section>
     </main>
     <?php require_once "./templates/footer.php" ?>
+    <script type="application/ld+json">
+    <?php
+      $siteUrl = 'https://nelavlckova.cz/';
+      $logoUrl = $siteUrl . 'img/logo.webp';
+      $service = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Service',
+        'name' => 'Vlastní bydlení – poradenství',
+        'description' => 'Komplexní poradenství pro financování vlastního bydlení: rozpočet, hypotéka, pojištění i dlouhodobá udržitelnost.',
+        'url' => $siteUrl . 'vlastni-bydleni',
+        'provider' => [
+          '@type' => 'Organization',
+          'name' => 'Nela Klečková',
+          'url' => $siteUrl,
+          'logo' => $logoUrl
+        ],
+        'areaServed' => 'CZ',
+        'inLanguage' => 'cs-CZ'
+      ];
+      echo json_encode($service, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    ?>
+    </script>
     <script defer src="./js/faq.min.js"></script>
     <script type="application/ld+json">
         {

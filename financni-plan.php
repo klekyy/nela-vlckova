@@ -40,6 +40,9 @@
     <meta property="og:title" content="Finanční plán na míru | Zajistěte si klidnou budoucnost">
     <meta property="og:image" content="img/nahledovka.webp">
     <meta property="og:description" content="Získejte jasný a efektivní finanční plán, který vám pomůže splnit finanční cíle, ochránit majetek a zajistit budoucnost.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nelavlckova.cz/financni-plan">
+    <link rel="canonical" href="https://nelavlckova.cz/financni-plan">
     <link rel="preload" href="fonts/Quicksand-Medium.woff2" as="font">
     <link rel="preload" href="fonts/Quicksand-Regular.woff2" as="font">
     <link rel="stylesheet" href="./style.min.css">
@@ -199,6 +202,28 @@
         </section>
     </main>
     <?php require_once "./templates/footer.php" ?>
+    <script type="application/ld+json">
+    <?php
+      $siteUrl = 'https://nelavlckova.cz/';
+      $logoUrl = $siteUrl . 'img/logo.webp';
+      $service = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Service',
+        'name' => 'Finanční plán – poradenství',
+        'description' => 'Komplexní finanční plán na míru: cíle, rozpočet, rezerva, pojištění, investice a dlouhodobá péče.',
+        'url' => $siteUrl . 'financni-plan',
+        'provider' => [
+          '@type' => 'Organization',
+          'name' => 'Nela Klečková',
+          'url' => $siteUrl,
+          'logo' => $logoUrl
+        ],
+        'areaServed' => 'CZ',
+        'inLanguage' => 'cs-CZ'
+      ];
+      echo json_encode($service, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    ?>
+    </script>
     <script defer src="./js/faq.min.js"></script>
     <script type="application/ld+json">
         {

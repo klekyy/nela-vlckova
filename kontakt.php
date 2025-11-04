@@ -37,9 +37,12 @@
     <title></title>
     <meta name="description"
         content="">
-    <meta property="og:title" content="">
+    <meta property="og:title" content="Kontakt | Nela Klečková">
     <meta property="og:image" content="img/nahledovka.webp">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="Kontaktujte mě – domluvte si nezávaznou konzultaci zdarma. Pomohu vám s finančním plánem, pojištěním, úvěry i investováním.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nelavlckova.cz/kontakt">
+    <link rel="canonical" href="https://nelavlckova.cz/kontakt">
     <link rel="preload" href="fonts/Quicksand-Medium.woff2" as="font">
     <link rel="preload" href="fonts/Quicksand-Regular.woff2" as="font">
     <link rel="stylesheet" href="./style.min.css">
@@ -66,7 +69,7 @@
                 <h1 class="service-heading">Kontaktujte mě</h1>
             </div>
             <div class="form-and-contact padding-inline">
-                <form action="send-form.php" method="POST">
+                <form action="send-form.php" method="POST" novalidate>
                     <h3>Máte <span class="blue-color">dotaz</span> nebo si chcete <span class="blue-color">sjednat schůzku?</span><br>Zanechte mi <span
                             class="blue-color">zprávu</span> nebo zavolejte na mé <span class="blue-color">telefonní
                             číslo.</h3>
@@ -130,8 +133,8 @@
                         </div>
                     </fieldset>
                     <div class="input">
-                        <label for="email" class="input__label">Zpráva</label>
-                        <textarea cols="50" rows="10" required name="message"></textarea>
+                        <label for="message" class="input__label">Zpráva</label>
+                        <textarea id="message" cols="50" rows="10" required name="message"></textarea>
                     </div>
                     <div class="gdpr-checkbox">
                         <label for="gdpr_consent">
@@ -229,6 +232,30 @@
     </main>
     <?php require_once "./templates/footer.php" ?>
     <script defer src="./js/faq.min.js"></script>
+    <script type="application/ld+json">
+    <?php
+      $siteUrl = 'https://nelavlckova.cz/';
+      $orgName = 'Nela Klečková';
+      $logoUrl = $siteUrl . 'img/logo.webp';
+      $phone = '+420735998536';
+      $email = 'finance@nelavlckova.cz';
+      $contact = [
+        '@context' => 'https://schema.org',
+        '@type' => 'ContactPage',
+        'name' => 'Kontakt',
+        'url' => $siteUrl . 'kontakt',
+        'about' => [
+          '@type' => 'Organization',
+          'name' => $orgName,
+          'url' => $siteUrl,
+          'logo' => $logoUrl,
+          'email' => $email,
+          'telephone' => $phone
+        ]
+      ];
+      echo json_encode($contact, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    ?>
+    </script>
     <script defer src="./js/main-form-errors.min.js"></script>
     <script type="application/ld+json">
         {

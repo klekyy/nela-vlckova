@@ -37,6 +37,9 @@
     <title>Stránka nenalezena</title>
     <meta name="description"
         content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nelavlckova.cz/404">
+    <link rel="canonical" href="https://nelavlckova.cz/404">
     <meta property="og:title" content="Stránka nenalezena">
     <meta property="og:image" content="img/nahledovka.webp">
     <meta property="og:description" content="">

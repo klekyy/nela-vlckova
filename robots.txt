@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Disallow internal or utility endpoints if any (none currently)
+
+Sitemap: https://nelavlckova.cz/sitemap.xml

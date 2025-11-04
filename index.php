@@ -84,6 +84,8 @@ function format_cz_date($isoDate) {
     <meta property="og:title" content="Finanční poradce pro Moravskoslezský kraj | Nela Klečková">
     <meta property="og:image" content="img/nahledovka.webp">
     <meta property="og:description" content="Zabývám se finančním plánováním, hypotékami, úvěry, pojištěním, spořením či investováním. Pomáhám svým klientům plnit jejich finanční plány.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nelavlckova.cz/">
     <link rel="preload" href="fonts/Quicksand-Medium.woff2" as="font">
     <link rel="preload" href="fonts/Quicksand-Regular.woff2" as="font">
     <link rel="stylesheet" href="./style.min.css">
@@ -214,7 +216,7 @@ function format_cz_date($isoDate) {
                 <h2 data-aos="fade-up" data-aos-delay="100">Jsem tu <span class="blue-color">pro vás</span></h2>
             </div>
             <div class="form-and-contact padding-inline">
-                <form action="send-form.php" method="POST">
+                <form action="send-form.php" method="POST" novalidate>
                     <h3>Máte <span class="blue-color">dotaz</span> nebo si chcete <span class="blue-color">sjednat schůzku?</span><br>Zanechte mi <span
                             class="blue-color">zprávu</span> nebo zavolejte na mé <span class="blue-color">telefonní
                             číslo.</h3>
@@ -278,8 +280,8 @@ function format_cz_date($isoDate) {
                         </div>
                     </fieldset>
                     <div class="input">
-                        <label for="email" class="input__label">Zpráva</label>
-                        <textarea cols="50" rows="10" required name="message"></textarea>
+                        <label for="message" class="input__label">Zpráva</label>
+                        <textarea id="message" cols="50" rows="10" required name="message"></textarea>
                     </div>
                     <div class="gdpr-checkbox">
                         <label for="gdpr_consent">
@@ -381,7 +383,7 @@ function format_cz_date($isoDate) {
                                 <div class="g-reviews__meta">
                                     <div class="g-reviews__name"><?php echo htmlspecialchars($r["name"]); ?></div>
                                     <div class="g-reviews__date"><?php echo format_cz_date($r["date"]); ?></div>
-                                    <div class="g-reviews__stars" aria-label="<?php echo (int)$r['stars']; ?> z 5">
+                                    <div class="g-reviews__stars">
                                         <?php for ($i = 0; $i < 5; $i++): ?>
                                             <img src="img/hvezda.svg" alt="" class="g-reviews__star" loading="lazy" width="16" height="16">
                                         <?php endfor; ?>
@@ -413,6 +415,66 @@ function format_cz_date($isoDate) {
             </div>
         </section>
     </main>
+
+    <?php
+      // Structured data for SEO: WebSite + FinancialService (LocalBusiness)
+      $siteUrl = 'https://nelavlckova.cz/';
+      $orgName = 'Nela Klečková';
+      $logoUrl = $siteUrl . 'img/logo.webp';
+      $phone = '+420735998536';
+      $email = 'finance@nelavlckova.cz';
+      $sameAs = ['https://www.instagram.com/jak_na_finance/'];
+
+      // Aggregate rating from homepage reviews
+      $reviewCount = is_array($reviews) ? count($reviews) : 0;
+      $avg = null;
+      if ($reviewCount > 0) {
+        $sum = 0; foreach ($reviews as $r) { $sum += (int)($r['stars'] ?? 0); }
+        $avg = round($sum / $reviewCount, 2);
+      }
+
+      $graph = [];
+      $graph[] = [
+        '@type' => 'WebSite',
+        '@id' => $siteUrl . '#website',
+        'url' => $siteUrl,
+        'name' => 'Finanční poradce | ' . $orgName,
+        'inLanguage' => 'cs-CZ'
+      ];
+      $business = [
+        '@type' => 'FinancialService',
+        '@id' => $siteUrl . '#business',
+        'name' => $orgName,
+        'url' => $siteUrl,
+        'image' => $logoUrl,
+        'logo' => $logoUrl,
+        'email' => $email,
+        'telephone' => $phone,
+        'address' => [
+          '@type' => 'PostalAddress',
+          'streetAddress' => 'Cholevova 1464/35',
+          'addressLocality' => 'Ostrava',
+          'postalCode' => '700 30',
+          'addressCountry' => 'CZ'
+        ],
+        'areaServed' => 'CZ',
+        'sameAs' => $sameAs,
+      ];
+      if ($avg !== null) {
+        $business['aggregateRating'] = [
+          '@type' => 'AggregateRating',
+          'ratingValue' => $avg,
+          'bestRating' => 5,
+          'worstRating' => 1,
+          'ratingCount' => $reviewCount,
+          'reviewCount' => $reviewCount
+        ];
+      }
+      $graph[] = $business;
+    ?>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":<?= json_encode($graph, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?>}
+    </script>
 
     <?php require_once "./templates/footer.php" ?>
     <script defer src="./js/faq.min.js"></script>

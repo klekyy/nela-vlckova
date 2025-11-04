@@ -40,6 +40,9 @@
     <meta property="og:title" content="Neživotní pojištění na míru | Chraňte majetek i odpovědnost">
     <meta property="og:image" content="img/nahledovka.webp">
     <meta property="og:description" content="Pomohu vám vybrat neživotní pojištění, které vás opravdu ochrání – domácnost, auto, odpovědnost i podnikání.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nelavlckova.cz/nezivotni-pojisteni">
+    <link rel="canonical" href="https://nelavlckova.cz/nezivotni-pojisteni">
     <link rel="preload" href="fonts/Quicksand-Medium.woff2" as="font">
     <link rel="preload" href="fonts/Quicksand-Regular.woff2" as="font">
     <link rel="stylesheet" href="./style.min.css">
@@ -214,6 +217,28 @@
         </section>
     </main>
     <?php require_once "./templates/footer.php" ?>
+    <script type="application/ld+json">
+    <?php
+      $siteUrl = 'https://nelavlckova.cz/';
+      $logoUrl = $siteUrl . 'img/logo.webp';
+      $service = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Service',
+        'name' => 'Neživotní pojištění – poradenství',
+        'description' => 'Pojištění majetku, domácnosti, odpovědnosti i vozidel – nastavení bez zbytečných výluk.',
+        'url' => $siteUrl . 'nezivotni-pojisteni',
+        'provider' => [
+          '@type' => 'Organization',
+          'name' => 'Nela Klečková',
+          'url' => $siteUrl,
+          'logo' => $logoUrl
+        ],
+        'areaServed' => 'CZ',
+        'inLanguage' => 'cs-CZ'
+      ];
+      echo json_encode($service, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    ?>
+    </script>
     <script defer src="./js/faq.min.js"></script>
     <script type="application/ld+json">
         {

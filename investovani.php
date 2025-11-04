@@ -40,6 +40,9 @@
     <meta property="og:title" content="Začněte investovat chytře | Pomohu vám s plánem i portfoliem">
     <meta property="og:image" content="img/nahledovka.webp">
     <meta property="og:description" content="Hledáte cestu, jak zhodnotit peníze? Společně nastavíme investiční strategii podle vašich cílů a rizikového profilu.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nelavlckova.cz/investovani">
+    <link rel="canonical" href="https://nelavlckova.cz/investovani">
     <link rel="preload" href="fonts/Quicksand-Medium.woff2" as="font">
     <link rel="preload" href="fonts/Quicksand-Regular.woff2" as="font">
     <link rel="stylesheet" href="./style.min.css">
@@ -206,6 +209,28 @@
         </section>
     </main>
     <?php require_once "./templates/footer.php" ?>
+    <script type="application/ld+json">
+    <?php
+      $siteUrl = 'https://nelavlckova.cz/';
+      $logoUrl = $siteUrl . 'img/logo.webp';
+      $service = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Service',
+        'name' => 'Investování – finanční poradenství',
+        'description' => 'Nastavení investiční strategie dle cílů a rizikového profilu, výběr nástrojů a dlouhodobý plán.',
+        'url' => $siteUrl . 'investovani',
+        'provider' => [
+          '@type' => 'Organization',
+          'name' => 'Nela Klečková',
+          'url' => $siteUrl,
+          'logo' => $logoUrl
+        ],
+        'areaServed' => 'CZ',
+        'inLanguage' => 'cs-CZ'
+      ];
+      echo json_encode($service, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    ?>
+    </script>
     <script defer src="./js/faq.min.js"></script>
     <script type="application/ld+json">
 {
