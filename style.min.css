@@ -856,7 +856,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: .7rem;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 input[type="text"],
