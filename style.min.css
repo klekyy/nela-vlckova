@@ -299,7 +299,7 @@ h3 {
     flex-wrap: wrap;
 }
 
-.secondary-button {
+.secondary-button,.cta-button-secondary{
     background-color: transparent;
     border: 2.5px solid var(--text-color);
     color: var(--text-color);
@@ -995,6 +995,7 @@ input[type="submit"] {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .email,
@@ -1004,6 +1005,23 @@ input[type="submit"] {
     align-items: center;
     width: 280px;
 }
+
+/* Contact links – hover animation */
+.email-and-phone .link-button{position:relative;transition:color .3s ease,transform .3s ease}
+.email-and-phone .link-button::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:100%;background:var(--light-blue-color);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.email-and-phone .link-button:hover{color:var(--light-blue-color)}
+.email-and-phone .link-button:hover::after{transform:scaleX(1)}
+.email:hover .email-img,.phone:hover .phone-img{transform:translateY(-2px) scale(1.05);box-shadow:0 6px 14px rgba(0,0,0,.12)}
+
+/* Ebook promo block */
+.ebook-promo{width:100%;max-width: 400px;background:#e5e7eb;color:var(--text-color);border-radius:12px;padding:1.5rem;display:grid;grid-template-columns:1fr;gap:.75rem}
+.ebook-promo__image{width:100%;max-width:300px;display:block}
+.ebook-promo__title{font-size:1.5rem; margin-bottom: 1rem;}
+.ebook-promo__desc{font-size:.9rem;opacity:.95;margin-bottom: 2rem;}
+.ebook-promo__list{display:grid;gap:.6rem}
+.ebook-promo__list li{line-height:1.4;list-style:none;font-size: 0.9rem;}
+.ebook-promo__list li::before{content:"";display:inline-block;width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23232121' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat;margin-right:12px;vertical-align:middle}
+.ebook-promo .cta-button{font-size: 0.9rem;width:max-content;margin-top: 2rem;}
 
 /* Footer */
 
@@ -1055,9 +1073,8 @@ footer {
 .footer-details li {
     list-style-type: none;
     color: #ffffffcc;
-    font-size: .75rem;
+    font-size: .8rem;
     font-style: italic;
-    font-family: "Font Regular", sans-serif;
 }
 
 .footer-ul li {
@@ -1358,13 +1375,13 @@ input[type="file"] {
         width: 100%;
     }
 
-    .secondary-button:hover {
+    .secondary-button:hover, .cta-button-secondary:hover {
         background-color: var(--text-color);
         color: var(--classic-white-color);
         transition: all .4s;
     }
 
-    .secondary-button-white:hover {
+.secondary-button-white:hover {
         background-color: var(--classic-white-color);
         color: var(--text-color);
         transition: all .4s;

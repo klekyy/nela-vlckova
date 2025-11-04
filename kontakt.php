@@ -158,6 +158,20 @@
                         </div>
                         <a href="https://www.instagram.com/jak_na_finance/" target="_blank" class="link-button">jak_na_finance</a>
                     </div>
+                    <div class="ebook-promo" aria-labelledby="ebook-promo-title">
+                        <img class="ebook-promo__image" src="img/ebook-finance.png" alt="E‑book zdarma" loading="lazy" fetchpriority="low">
+                        <div class="ebook-promo__content">
+                            <h3 id="ebook-promo-title" class="ebook-promo__title">Získejte e‑book zdarma</h3>
+                            <p class="ebook-promo__desc">Získejte zdarma praktický e‑book 9 kroků jak přestat žít od výplaty k výplatě, díky kterému zjistíte:</p>
+                            <ul class="ebook-promo__list">
+                                <li>Kde zbytečně mizí peníze</li>
+                                <li>Jak si nastavit rozpočet, který vydrží</li>
+                                <li>Jak rychle vytvořit finanční rezervu</li>
+                            </ul>
+                            <!-- MailerLite button -->
+                            <a class="ml-onclick-form cta cta-button cta-button-secondary" href="javascript:void(0)" onclick="ml('show', 'j8wkvn', true)"><span>Získat e‑book zdarma</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
